@@ -25,26 +25,51 @@ flatpak install flathub org.gnome.clocks -y
 sudo apt install libwxgtk3.0-gtk3-dev -y
 wget http://mirrors.edge.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb -O woeusb.deb
 sudo dpkg -i woeusb.deb
+#TODO FIX WOEUSB INSTALL
 rm woeusb.deb
 
 
 # replace libreoffice to wps office
 flatpak install flathub com.wps.Office -y
-sudo apt-get remove --purge libreoffice* && sudo apt clean && sudo apt-get autoremove
+sudo apt-get -y remove --purge libreoffice* 
+sudo apt -y clean
+sudo apt-get -y autoremove
 #install fonts
 wget https://codeload.github.com/udoyen/wps-fonts/zip/master -O wpsfonts.zip
-unzip wpsfonts.zip
+unzip wpsfonts.zip -d wpsfonts
 rm wpsfonts.zip
 sudo mkdir -p /usr/share/fonts/kingsoft
-sudo cp -a wpsfonts/wps/. /usr/share/fonts/kingsoft/
+sudo cp -a wpsfonts/wps-fonts-master/wps/. /usr/share/fonts/kingsoft/
 sudo rm -r wpsfonts
 
 wget https://codeload.github.com/dyegoaurelio/linuxfonts/zip/main -O allfonts.zip
-unzip allfonts.zip
+unzip allfonts.zip -d allfonts
 rm allfonts.zip
-sudo cp -a  allfonts/. /usr/share/fonts/kingsoft/
+sudo cp -a  allfonts/linuxfonts-main/. /usr/share/fonts/kingsoft/
 sudo rm -r allfonts
 
 sudo chown -R $USER:$USER /usr/share/fonts/kingsoft
 sudo chmod -R o+rw,g+rw /usr/share/fonts/kingsoft
 sudo fc-cache -vfs
+
+# install vscodium 
+wget -qO - [https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg](https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg) | gpg --dearmor | sudo dd of=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg
+echo 'deb [signed-by=/etc/apt/trusted.gpg.d/vscodium-archive-keyring.gpg] [https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/](https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/debs/) vscodium main' | sudo tee /etc/apt/sources.list.d/vscodium.list
+sudo apt update
+sudo apt install codium
+#codium extensions
+codium --install-extension esbenp.prettier-vscode
+codium --install-extension yzhang.markdown-all-in-one
+codium --install-extension CoenraadS.bracket-pair-colorizer-2
+codium --install-extension Equinusocio.vsc-material-theme-icons
+codium --install-extension Equinusocio.vsc-material-theme
+
+#install programming languages
+sudo apt install python3 python3-pip
+pip install jupyter notebook
+
+sudo apt install nodejs npm
+
+#TO DO
+#config firefox
+#config git
