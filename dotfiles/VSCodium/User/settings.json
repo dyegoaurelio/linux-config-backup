@@ -1,0 +1,19 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Community Material Theme High Contrast",
+    "tabnine.experimentalAutoImports": true,
+    "git.confirmSync": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 0,
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "left",
+    "workbench.activityBar.visible": true,
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.inheritEnv": false
+}
