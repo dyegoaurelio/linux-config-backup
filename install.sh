@@ -1,4 +1,37 @@
 # script to install my workflow on Pop!_Os 20.10
+
+#gettig options
+installFonts=TRUE
+# options may be followed by one colon to indicate they have a required argument
+if ! options=$(getopt -o hc: -l help,no-download-fonts,clong: -- "$@")
+then
+    # something went wrong, getopt will put out an error message for us
+    exit 1
+fi
+
+set -- $options
+
+while [ $# -gt 0 ]
+do
+    case $1 in
+
+    
+    -a|--along) echo a ;;
+    -h|--help) 
+    echo "Just run with no arguments to install all programs"
+    echo "--no-download-fonts                to dont download all fonts to be compatible with windows"
+    exit 0;
+    ;;
+    --no-download-fonts) installFonts=FALSE;;
+    # for options with required arguments, an additional shift is required
+    -c|--clong) cargument="$2" ; shift;;
+    (--) shift; break;;
+    (-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
+    (*) break;;
+    esac
+    shift
+done
+
 sudo apt install wmctrl -y # required for some shortcuts
 sudo apt install gnome-tweaks -y
 dconf write /org/gnome/desktop/interface/gtk-enable-primary-paste true # para ativar o middle click to paste no terminal
@@ -42,11 +75,14 @@ sudo mkdir -p /usr/share/fonts/kingsoft
 sudo cp -a wpsfonts/wps-fonts-master/wps/. /usr/share/fonts/kingsoft/
 sudo rm -r wpsfonts
 
-wget https://codeload.github.com/dyegoaurelio/linuxfonts/zip/main -O allfonts.zip
-unzip allfonts.zip -d allfonts
-rm allfonts.zip
-sudo cp -a  allfonts/linuxfonts-main/. /usr/share/fonts/kingsoft/
-sudo rm -r allfonts
+if [[ $installFonts == TRUE ]]
+then
+    wget https://codeload.github.com/dyegoaurelio/linuxfonts/zip/main -O allfonts.zip
+    unzip allfonts.zip -d allfonts
+    rm allfonts.zip
+    sudo cp -a  allfonts/linuxfonts-main/. /usr/share/fonts/kingsoft/
+    sudo rm -r allfonts
+fi
 
 sudo chown -R $USER:$USER /usr/share/fonts/kingsoft
 sudo chmod -R o+rw,g+rw /usr/share/fonts/kingsoft
