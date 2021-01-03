@@ -105,10 +105,15 @@ codium --install-extension Equinusocio.vsc-material-theme-icons
 codium --install-extension Equinusocio.vsc-material-theme
 
 #install programming languages
-sudo apt install -y python3 python3-pip
+sudo apt install -y python3 python3-pip jupyter-notebook
 pip install jupyter notebook
 
 sudo apt install -y nodejs npm
+
+# Setup useful applications
+## setting up firefox
+### install firefox gnome theme
+wget -O - https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
 
 #TO DO
 #config firefox
