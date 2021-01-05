@@ -8,3 +8,4 @@
 87e0837134fd24d8f75576501e12f6558a11ae4c 8a1c7d5d0e597f3b05b27eb13475f5ac6c00d7ad Dyego Aurelo <dyegoaurelio@gmail.com> 1609708998 -0300	commit: add .gitconfig
 8a1c7d5d0e597f3b05b27eb13475f5ac6c00d7ad 8a1c7d5d0e597f3b05b27eb13475f5ac6c00d7ad Dyego Aurelo <dyegoaurelio@gmail.com> 1609709268 -0300	reset: moving to HEAD
 8a1c7d5d0e597f3b05b27eb13475f5ac6c00d7ad e2c15151300d9f9fde4f105884e2ec07cd3f7a45 Dyego Aurelo <dyegoaurelio@gmail.com> 1609791450 -0300	commit: tweak app grid
+e2c15151300d9f9fde4f105884e2ec07cd3f7a45 0037948fca643d0b41d44f028fbc9c7dab02db2d Dyego Aurelo <dyegoaurelio@gmail.com> 1609864314 -0300	commit: store git credentials
