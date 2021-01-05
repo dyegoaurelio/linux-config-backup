@@ -58,7 +58,7 @@ flatpak install flathub org.gnome.clocks -y
 sudo apt install libwxgtk3.0-gtk3-dev -y
 wget http://mirrors.edge.kernel.org/ubuntu/pool/universe/w/wxwidgets3.0/libwxgtk3.0-0v5_3.0.4+dfsg-3_amd64.deb -O woeusb.deb
 sudo dpkg -i woeusb.deb
-#TODO FIX WOEUSB INSTALL
+#TO DO FIX WOEUSB INSTALL
 rm woeusb.deb
 
 
@@ -114,7 +114,3 @@ sudo apt install -y nodejs npm
 ## setting up firefox
 ### install firefox gnome theme
 wget -O - https://raw.githubusercontent.com/rafaelmardojai/firefox-gnome-theme/master/scripts/install-by-curl.sh | bash
-
-#TO DO
-#config firefox
-#config git
