@@ -104,11 +104,12 @@ codium --install-extension CoenraadS.bracket-pair-colorizer-2
 codium --install-extension Equinusocio.vsc-material-theme-icons
 codium --install-extension Equinusocio.vsc-material-theme
 
-#install programming languages
+#install programming tecnologies
 sudo apt install -y python3 python3-pip jupyter-notebook
 pip install jupyter notebook
 
 sudo apt install -y nodejs npm
+sudo npm install -g eslint
 
 # Setup useful applications
 ## setting up firefox
