@@ -104,6 +104,12 @@ codium --install-extension CoenraadS.bracket-pair-colorizer-2
 codium --install-extension Equinusocio.vsc-material-theme-icons
 codium --install-extension Equinusocio.vsc-material-theme
 
+#github cli
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages -y
+sudo apt -y update
+sudo apt -y install gh
+
 #install programming tecnologies
 sudo apt install -y python3 python3-pip jupyter-notebook
 pip install jupyter notebook
