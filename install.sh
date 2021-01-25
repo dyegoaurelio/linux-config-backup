@@ -110,6 +110,10 @@ sudo apt-add-repository https://cli.github.com/packages -y
 sudo apt -y update
 sudo apt -y install gh
 
+#set up thunar
+sudo apt install thunar
+xdg-mime default thunar.desktop inode/directory
+
 #install programming tecnologies
 sudo apt install -y python3 python3-pip jupyter-notebook
 pip install jupyter notebook
