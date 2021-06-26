@@ -1,1 +1,14 @@
-update
+commit
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# No ramo master
+# Mudanças a serem submetidas:
+#	modified:   .config/VSCodium/User/settings.json
+#	modified:   .config/dconf/user
+#	modified:   .mozilla/firefox/mb52h7tj.default-release/extensions.json
+#	modified:   .mozilla/firefox/mb52h7tj.default-release/extensions/jid1-NIfFY2CA8fy1tg@jetpack.xpi
+#	modified:   .mozilla/firefox/mb52h7tj.default-release/extensions/treestyletab@piro.sakura.ne.jp.xpi
+#	modified:   .mozilla/firefox/mb52h7tj.default-release/prefs.js
+#
+# Arquivos não rastreados não listados 
