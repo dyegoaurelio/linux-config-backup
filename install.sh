@@ -1,4 +1,4 @@
-# script to install my workflow on Pop!_Os 20.10
+# script to install my workflow on gnome
 
 #gettig options
 installFonts=TRUE
